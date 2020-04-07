@@ -32,6 +32,17 @@ $(document).ready(function(){
 			height: 350
 		}
 	});
+	
+	
+	$('#oldday2').gvChart({
+		chartType: 'LineChart',
+		gvSettings: {
+			vAxis: {title: '数据数量/个'},
+			hAxis: {title: '日期'},
+			width: 1100,
+			height: 350
+		}
+	});
 });
 </script>
 <div style="width:500px;">
@@ -85,6 +96,38 @@ $(document).ready(function(){
 		</tbody>
 	</table>
 </div>
+	
+<div>
+	<table id='oldday2'>
+		<caption>每月数据统计 2020-03-12 至 2020-12-15</caption>
+		<thead>
+			<tr>
+				<th></th>	
+				<th>2020-03-12</th>
+				<th>2020-03-26</th>
+				<th>2020-04-25</th>
+				<th>2020-05-25</th>
+				<th>2020-06-25</th>
+				<th>2020-07-25</th>
+				<th>2020-08-25</th>
+				<th>2020-09-25</th>
+				<th>2020-10-25</th>
+				<th>2020-11-25</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-----------第一条折线------------>
+			<tr>
+				<th>积攒</th>
+				<td>0</td>
+				<td>1162</td>
+				
+				
+			</tr>
+			
+		</tbody>
+	</table>
+</div>	
 	
 </body>
 </html>
