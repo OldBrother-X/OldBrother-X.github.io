@@ -1,0 +1,102 @@
+<script type="text/javascript" src="./jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="./jsapi.js"></script>
+<script type="text/javascript" src="./corechart.js"></script>
+<script type="text/javascript" src="./jquery.gvChart-1.0.1.min.js"></script>
+<script>
+gvChartInit();
+$(document).ready(function(){
+	/*ID 饼状图*/
+	$('#todayin').gvChart({
+		chartType: 'PieChart',
+		gvSettings: {
+			width: 500,
+			height: 350
+		}
+	});
+	/*ID 折线图*/
+	$('#oldday').gvChart({
+		chartType: 'LineChart',
+		gvSettings: {
+			vAxis: {title: '数据数量/个'},
+			hAxis: {title: '日期'},
+			width: 1100,
+			height: 350
+		}
+	});
+});
+</script>
+<div style="width:500px;">
+	<table id='todayin'>
+		<caption>地区分布统计</caption>
+		<thead>
+			<tr>
+				<th></th>
+				<th>北京</th>
+				<th>广州</th>
+				<th>甘肃</th>
+				<th>河南</th>
+				<th>湖北</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>695</th>
+				<td>100</td>
+				<td>94</td>
+				<td>132</td>
+				<td>213</td>
+				<td>156</td>
+			</tr>
+		</tbody>
+	</table>  
+</div>
+<div id="con6">
+	<table id='oldday'>
+		<caption>10天数据统计 2016-05-15 至 2016-05-24</caption>
+		<thead>
+			<tr>
+				<th></th>
+				<th>2016-05-15</th>
+				<th>2016-05-16</th>
+				<th>2016-05-17</th>
+				<th>2016-05-18</th>
+				<th>2016-05-19</th>
+				<th>2016-05-20</th>
+				<th>2016-05-21</th>
+				<th>2016-05-22</th>
+				<th>2016-05-23</th>
+				<th>2016-05-24</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-----------第一条折线------------>
+			<tr>
+				<th>增加</th>
+				<td>1</td>
+				<td>3</td>
+				<td>2</td>
+				<td>0</td>
+				<td>5</td>
+				<td>6</td>
+				<td>4</td>
+				<td>8</td>
+				<td>2</td>
+				<td>5</td>
+			</tr>
+			<!-----------第二条折线------------>
+			<tr>
+				<th>删除</th>
+				<td>2</td>
+				<td>2</td>
+				<td>0</td>
+				<td>0</td>
+				<td>4</td>
+				<td>1</td>
+				<td>3</td>
+				<td>0</td>
+				<td>1</td>
+				<td>0</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
