@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>money(runoob.com)</title>
+</head>
+<body>
+
+
 <script type="text/javascript" src="./jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="./jsapi.js"></script>
 <script type="text/javascript" src="./corechart.js"></script>
@@ -5,7 +14,7 @@
 <script>
 gvChartInit();
 $(document).ready(function(){
-	/*ID ±ı×´Í¼*/
+	/*ID é¥¼çŠ¶å›¾*/
 	$('#todayin').gvChart({
 		chartType: 'PieChart',
 		gvSettings: {
@@ -13,12 +22,12 @@ $(document).ready(function(){
 			height: 350
 		}
 	});
-	/*ID ÕÛÏßÍ¼*/
+	/*ID æŠ˜çº¿å›¾*/
 	$('#oldday').gvChart({
 		chartType: 'LineChart',
 		gvSettings: {
-			vAxis: {title: 'Êı¾İÊıÁ¿/¸ö'},
-			hAxis: {title: 'ÈÕÆÚ'},
+			vAxis: {title: 'æ•°æ®æ•°é‡/ä¸ª'},
+			hAxis: {title: 'æ—¥æœŸ'},
 			width: 1100,
 			height: 350
 		}
@@ -27,15 +36,15 @@ $(document).ready(function(){
 </script>
 <div style="width:500px;">
 	<table id='todayin'>
-		<caption>µØÇø·Ö²¼Í³¼Æ</caption>
+		<caption>åœ°åŒºåˆ†å¸ƒç»Ÿè®¡</caption>
 		<thead>
 			<tr>
 				<th></th>
-				<th>±±¾©</th>
-				<th>¹ãÖİ</th>
-				<th>¸ÊËà</th>
-				<th>ºÓÄÏ</th>
-				<th>ºş±±</th>
+				<th>åŒ—äº¬</th>
+				<th>å¹¿å·</th>
+				<th>ç”˜è‚ƒ</th>
+				<th>æ²³å—</th>
+				<th>æ¹–åŒ—</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -52,7 +61,7 @@ $(document).ready(function(){
 </div>
 <div id="con6">
 	<table id='oldday'>
-		<caption>10ÌìÊı¾İÍ³¼Æ 2016-05-15 ÖÁ 2016-05-24</caption>
+		<caption>10å¤©æ•°æ®ç»Ÿè®¡ 2016-05-15 è‡³ 2016-05-24</caption>
 		<thead>
 			<tr>
 				<th></th>
@@ -69,9 +78,9 @@ $(document).ready(function(){
 			</tr>
 		</thead>
 		<tbody>
-			<!-----------µÚÒ»ÌõÕÛÏß------------>
+			<!-----------ç¬¬ä¸€æ¡æŠ˜çº¿------------>
 			<tr>
-				<th>Ôö¼Ó</th>
+				<th>å¢åŠ </th>
 				<td>1</td>
 				<td>3</td>
 				<td>2</td>
@@ -83,9 +92,9 @@ $(document).ready(function(){
 				<td>2</td>
 				<td>5</td>
 			</tr>
-			<!-----------µÚ¶şÌõÕÛÏß------------>
+			<!-----------ç¬¬äºŒæ¡æŠ˜çº¿------------>
 			<tr>
-				<th>É¾³ı</th>
+				<th>åˆ é™¤</th>
 				<td>2</td>
 				<td>2</td>
 				<td>0</td>
@@ -100,3 +109,6 @@ $(document).ready(function(){
 		</tbody>
 	</table>
 </div>
+	
+</body>
+</html>
