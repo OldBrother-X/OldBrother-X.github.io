@@ -1,147 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>money</title>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
 </head>
 <body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 1200px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
 
+        // 指定图表的配置项和数据
+        option = {
+		
+		title: {
+                text: '数据统计日期2020.1.16-2020.12.15'
+            },
+		
+           tooltip: {},
+            legend: {
+                data:['将有','已有']
+				
+            },		
+		
+    xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed']
+    },
+    yAxis: {
+        type: 'value',
+		
+    },
+    series: [
+	{ name:'将有',data: [128888, 129000, 129999],type: 'line',itemStyle : { normal: {label : {show: true}}}},
+	{ name:'已有',data: [47000, 52000, 53000],type: 'line',itemStyle : { normal: {label : {show: true}}}}	
+		
+    
+	
+	]
+	
+};
 
-<script type="text/javascript" src="./jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="./jsapi.js"></script>
-<script type="text/javascript" src="./corechart.js"></script>
-<script type="text/javascript" src="./jquery.gvChart-1.0.1.min.js"></script>
-<script>
-gvChartInit();
-$(document).ready(function(){
-	/*ID 饼状图*/
-	$('#todayin').gvChart({
-		chartType: 'PieChart',
-		gvSettings: {
-			width: 500,
-			height: 350
-		}
-	});
-	/*ID 折线图*/
-	$('#oldday').gvChart({
-		chartType: 'LineChart',
-		gvSettings: {
-			vAxis: {title: '数据数量/个',gridlines: { count: 25 }},/*设置网格线*/
-			hAxis: {title: '日期'},
-			width: 1100,
-			height: 1000,
-			pointSize: 5/*追加数据点*/
-		}
-	});
-	
-	
-	$('#oldday2').gvChart({
-		chartType: 'LineChart',
-		gvSettings: {
-			vAxis: {title: '数据数量/个'},
-			hAxis: {title: '日期'},
-			width: 1100,
-			height: 350
-		}
-	});
-});
-</script>
-<div style="width:500px;">
-	<table id='todayin'>
-		<caption>币值占比</caption>
-		<thead>
-			<tr>
-				<th></th>
-				<th>人民币</th>
-				<th>日元</th>
-				
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th>129946</th>
-				<td>97360</td>
-				<td>32586</td>
-				
-			</tr>
-		</tbody>
-	</table>  
-</div>
-<div id="con6">
-	<table id='oldday'>
-		<caption>每月数据统计 2020-03-12 至 2020-12-15</caption>
-		<thead>
-			<tr>
-				<th></th>
-				<th>2020-03-12</th>
-				<th>2020-03-26</th>
-				<th>2020-04-24</th>
-				<th>2020-05-25</th>
-				<th>2020-06-25</th>
-				<th>2020-07-25</th>
-				<th>2020-08-25</th>
-				<th>2020-09-25</th>
-				<th>2020-10-25</th>
-				<th>2020-11-25</th>
-			</tr>
-		</thead>
-		<tbody>
-			<!-----------第一条折线------------>
-			<tr>
-				<th>将有</th>
-				<td>128721</td>
-				<td>129626</td>
-				<td>129946</td>
-				
-			</tr>
-			
-			<!-----------第2条折线------------>
-			<tr>
-				<th>已有</th>
-				<td>51393</td>
-				<td>57318</td>
-				<td>64278</td>
-				
-			</tr>
-			
-		</tbody>
-	</table>
-</div>
-<br>
-<br>
-<br>
-<div>
-	<table id='oldday2'>
-		<caption>每月数据统计 2020-03-12 至 2020-12-15</caption>
-		<thead>
-			<tr>
-				<th></th>	
-				<th>2020-03-12</th>
-				<th>2020-03-26</th>
-				<th>2020-04-24</th>
-				<th>2020-05-25</th>
-				<th>2020-06-25</th>
-				<th>2020-07-25</th>
-				<th>2020-08-25</th>
-				<th>2020-09-25</th>
-				<th>2020-10-25</th>
-				<th>2020-11-25</th>
-			</tr>
-		</thead>
-		<tbody>
-			<!-----------第一条折线------------>
-			<tr>
-				<th>零钱</th>
-				<td>0</td>
-				<td>562</td>
-				<td>903</td>
-				
-				
-			</tr>
-			
-		</tbody>
-	</table>
-</div>	
-	
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
 </body>
 </html>
