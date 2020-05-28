@@ -50,8 +50,47 @@ $(document).ready(function(){
 			pointSize: 5/*追加数据点*/	
 		}	
 	});	
-});	        
-</script>	       
+});
+	
+	//js 时间戳
+function displayDate(){
+
+	var YIYOU_REN=document.getElementById('YIYOU_REN');
+	var YIYOU_RI=document.getElementById('YIYOU_RI');
+	var YUJI_REN=document.getElementById('YUJI_REN');
+	var YUJI_RI=document.getElementById('YUJI_RI');
+	var BILI=document.getElementById('BILI');
+	//window.alert(i.value);	
+	var GONG_REN=Number(YIYOU_REN.value)+Number(YUJI_REN.value);
+	var GONG_RI=Number(YIYOU_RI.value)+Number(YUJI_RI.value);
+	var RI_TO_REN=GONG_RI/100.0*BILI.value;
+	GONG=RI_TO_REN+GONG_REN;
+	
+	document.getElementById("demo").innerHTML=String(GONG);
+}
+	
+	
+	
+</script>	
+	
+	<br>
+YIYOU_REN
+<input id='YIYOU_REN' type='text' value="55951" autocomplete="off"/>
+YIYOU_RI
+<input id='YIYOU_RI' type='text'  value="257000" autocomplete="off"/>
+YUJI_REN
+<input id='YUJI_REN' type='text'  value="44662" autocomplete="off"/>
+YUJI_RI
+<input id='YUJI_RI' type='text'  value="286100" autocomplete="off"/>
+BILI
+<input id='BILI' type='text'  value="6"autocomplete="off"/>
+
+
+</br>
+
+<p id="demo">计算结果</p>
+<button type="button" onclick="displayDate()">计算</button>
+	
 <div style="width:500px;">	   
 	<table id='todayin'>	
 		<caption>币值占比</caption>
