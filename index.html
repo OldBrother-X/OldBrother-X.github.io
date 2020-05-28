@@ -69,8 +69,8 @@ function displayDate(){
 
 	YIYOU_GONG=Number(YIYOU_REN.value)+Number(YIYOU_RI.value)/100.0*BILI.value;
 	
-	document.getElementById("demo").innerHTML=String(YUJI_GONG);
-	document.getElementById("demo2").innerHTML=String(YIYOU_GONG);
+	document.getElementById("demo").innerHTML=String("预计计算结果:"+YUJI_GONG);
+	document.getElementById("demo2").innerHTML=String("已有计算结果:"+YIYOU_GONG);
 }
 	
 	
@@ -91,7 +91,7 @@ BILI
 
 
 </br>
-最高153677.6
+最高:153677.6
 <p id="demo">预计计算结果</p>
 <p id="demo2">已有计算结果</p>
 <button type="button" onclick="displayDate()">计算</button>
